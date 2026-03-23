@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>꼬꿍 스튜디오 | Kokoong Studio</title>
+<meta name="description" content="꼬꿍 스튜디오 - Save Princess Torosso 개발">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --gold:#C9A84C;
+  --gold-light:#E8D5A0;
+  --gold-dark:#8B6914;
+  --parchment:#F5EFE0;
+  --ink:#1A1714;
+  --ink-light:#3D3529;
+  --cream:#FAF7F0;
+  --shadow:rgba(26,23,20,0.12);
+}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Noto Sans KR','Cormorant Garamond',serif;
+  background:var(--cream);
+  color:var(--ink);
+  overflow-x:hidden;
+}
+
+/* --- Grain overlay --- */
+body::after{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:9999;
+  opacity:0.03;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* --- Header / Hero --- */
+.hero{
+  min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;position:relative;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 40%, rgba(201,168,76,0.06) 0%, transparent 70%),
+    linear-gradient(180deg, var(--cream) 0%, var(--parchment) 100%);
+}
+.hero::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent,var(--gold-light),transparent);
+}
+
+/* Decorative corner flourishes */
+.flourish{
+  position:absolute;width:80px;height:80px;opacity:0.15;
+  border:2px solid var(--gold);
+}
+.flourish.tl{top:40px;left:40px;border-right:none;border-bottom:none}
+.flourish.tr{top:40px;right:40px;border-left:none;border-bottom:none}
+.flourish.bl{bottom:40px;left:40px;border-right:none;border-top:none}
+.flourish.br{bottom:40px;right:40px;border-left:none;border-top:none}
+
+.studio-mark{
+  font-family:'Cinzel',serif;font-size:0.85rem;letter-spacing:0.35em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:2rem;
+  animation:fadeUp 1s ease both;
+}
+.studio-mark span{
+  display:inline-block;padding:0.4em 1.2em;
+  border:1px solid var(--gold-light);
+}
+
+.hero h1{
+  font-family:'Cinzel',serif;font-weight:400;
+  font-size:clamp(2.4rem,6vw,4.5rem);line-height:1.15;
+  letter-spacing:0.04em;color:var(--ink);
+  margin-bottom:1rem;
+  animation:fadeUp 1s 0.2s ease both;
+}
+.hero h1 em{
+  font-style:italic;font-family:'Cormorant Garamond',serif;
+  font-weight:500;color:var(--gold-dark);
+}
+
+.hero-sub{
+  font-family:'Cormorant Garamond',serif;font-size:clamp(1.1rem,2.5vw,1.4rem);
+  color:var(--ink-light);font-weight:400;font-style:italic;
+  letter-spacing:0.02em;max-width:540px;line-height:1.6;
+  animation:fadeUp 1s 0.4s ease both;
+}
+
+.divider{
+  width:60px;height:1px;background:var(--gold);margin:2.5rem auto;
+  position:relative;
+  animation:fadeUp 1s 0.5s ease both;
+}
+.divider::before{
+  content:'◆';position:absolute;top:50%;left:50%;
+  transform:translate(-50%,-50%);font-size:0.5rem;color:var(--gold);
+  background:var(--parchment);padding:0 0.8em;
+}
+
+.scroll-hint{
+  position:absolute;bottom:3rem;
+  font-family:'Cormorant Garamond',serif;font-size:0.85rem;
+  color:var(--gold);letter-spacing:0.15em;text-transform:uppercase;
+  animation:pulse 3s ease-in-out infinite;
+}
+.scroll-hint::after{
+  content:'';display:block;width:1px;height:28px;
+  background:var(--gold-light);margin:0.6rem auto 0;
+}
+
+/* --- Section base --- */
+section{padding:6rem 2rem}
+.container{max-width:900px;margin:0 auto}
+
+/* --- About --- */
+.about{background:var(--parchment);position:relative}
+.about::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent,var(--gold-light),transparent);
+}
+.section-label{
+  font-family:'Cinzel',serif;font-size:0.75rem;letter-spacing:0.4em;
+  text-transform:uppercase;color:var(--gold);text-align:center;margin-bottom:2.5rem;
+}
+.about p{
+  font-family:'Noto Sans KR',sans-serif;font-size:1.05rem;line-height:2;
+  color:var(--ink-light);text-align:center;max-width:640px;margin:0 auto;
+  font-weight:300;
+}
+.about p strong{font-weight:500;color:var(--ink)}
+
+/* --- Game card --- */
+.game-section{background:var(--cream)}
+.game-card{
+  background:var(--parchment);
+  border:1px solid rgba(201,168,76,0.2);
+  padding:3.5rem;position:relative;
+  max-width:760px;margin:0 auto;
+}
+.game-card::before{
+  content:'';position:absolute;inset:8px;
+  border:1px solid rgba(201,168,76,0.08);pointer-events:none;
+}
+.game-tag{
+  font-family:'Cinzel',serif;font-size:0.65rem;letter-spacing:0.35em;
+  text-transform:uppercase;color:var(--gold);
+  margin-bottom:1.2rem;display:inline-block;
+  padding:0.3em 0.8em;border:1px solid var(--gold-light);
+}
+.game-card h3{
+  font-family:'Cinzel',serif;font-weight:500;font-size:clamp(1.6rem,3.5vw,2.2rem);
+  color:var(--ink);margin-bottom:1rem;letter-spacing:0.03em;
+}
+.game-card p{
+  font-family:'Noto Sans KR',sans-serif;font-size:1rem;line-height:1.9;
+  color:var(--ink-light);font-weight:300;margin-bottom:1.5rem;
+}
+.game-meta{
+  display:flex;gap:2rem;flex-wrap:wrap;
+  border-top:1px solid rgba(201,168,76,0.15);padding-top:1.5rem;
+}
+.game-meta dt{
+  font-family:'Cinzel',serif;font-size:0.65rem;letter-spacing:0.25em;
+  text-transform:uppercase;color:var(--gold);margin-bottom:0.3rem;
+}
+.game-meta dd{
+  font-family:'Noto Sans KR',sans-serif;font-size:0.9rem;color:var(--ink-light);font-weight:400;
+}
+
+/* --- Links --- */
+.links{background:var(--parchment);text-align:center}
+.link-list{
+  display:flex;justify-content:center;gap:2rem;flex-wrap:wrap;margin-top:2rem;
+}
+.link-list a{
+  font-family:'Cinzel',serif;font-size:0.8rem;letter-spacing:0.2em;text-transform:uppercase;
+  color:var(--ink-light);text-decoration:none;
+  padding:0.7em 1.8em;border:1px solid rgba(201,168,76,0.3);
+  transition:all 0.4s ease;position:relative;
+}
+.link-list a:hover{
+  color:var(--gold-dark);border-color:var(--gold);
+  background:rgba(201,168,76,0.04);
+}
+
+/* --- Footer --- */
+footer{
+  text-align:center;padding:3rem 2rem;
+  border-top:1px solid rgba(201,168,76,0.12);
+  background:var(--cream);
+}
+footer p{
+  font-family:'Cormorant Garamond',serif;font-size:0.9rem;
+  color:var(--gold);letter-spacing:0.05em;
+}
+footer .copy{
+  font-family:'Noto Sans KR',sans-serif;font-size:0.75rem;
+  color:rgba(61,53,41,0.4);margin-top:0.6rem;
+}
+
+/* --- Animations --- */
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(20px)}
+  to{opacity:1;transform:translateY(0)}
+}
+@keyframes pulse{
+  0%,100%{opacity:0.5}50%{opacity:1}
+}
+
+/* Scroll reveal */
+.reveal{opacity:0;transform:translateY(30px);transition:all 0.8s cubic-bezier(0.22,1,0.36,1)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+/* --- Responsive --- */
+@media(max-width:600px){
+  .flourish{width:40px;height:40px;top:20px!important;left:20px!important;right:20px!important;bottom:20px!important}
+  section{padding:4rem 1.5rem}
+  .game-card{padding:2rem}
+  .game-meta{gap:1.2rem}
+  .link-list{flex-direction:column;align-items:center}
+}
+</style>
+</head>
+<body>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="flourish tl"></div>
+  <div class="flourish tr"></div>
+  <div class="flourish bl"></div>
+  <div class="flourish br"></div>
+
+  <div class="studio-mark"><span>꼬꿍 스튜디오</span></div>
+  <h1>Kokoong<br>Studio</h1>
+  <div class="divider"></div>
+  <p class="hero-sub">작은 스튜디오에서 시작하는<br>잊지 못할 모험 이야기</p>
+  <span class="scroll-hint">Scroll</span>
+</section>
+
+<!-- About -->
+<section class="about">
+  <div class="container reveal">
+    <div class="section-label">About</div>
+    <p>
+      <strong>꼬꿍 스튜디오</strong>는 플레이어의 마음에 오래 남는 이야기를 만듭니다.<br>
+      판타지 세계 속에서 펼쳐지는 모험과 감동을 통해,<br>
+      작지만 진심이 담긴 게임을 세상에 전합니다.
+    </p>
+  </div>
+</section>
+
+<!-- Game -->
+<section class="game-section">
+  <div class="container reveal">
+    <div class="section-label">Our Game</div>
+    <div class="game-card">
+      <span class="game-tag">In Development</span>
+      <h3>Save Princess Torosso</h3>
+      <p>
+        왕국에 드리운 어둠 속에서, 공주를 구하기 위한 여정이 시작됩니다.
+        신비로운 세계를 탐험하고 동료를 만나며,
+        잊혀진 마법의 비밀을 풀어가는 판타지 RPG.
+      </p>
+      <dl class="game-meta">
+        <div>
+          <dt>Genre</dt>
+          <dd>Fantasy RPG</dd>
+        </div>
+        <div>
+          <dt>Engine</dt>
+          <dd>Unity 6 URP</dd>
+        </div>
+        <div>
+          <dt>Platform</dt>
+          <dd>PC (Windows)</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>개발 중</dd>
+        </div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- Links -->
+<section class="links">
+  <div class="container reveal">
+    <div class="section-label">Connect</div>
+    <nav class="link-list">
+      <a href="https://x.com/" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="mailto:your-email@gmail.com">Contact</a>
+    </nav>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>꼬꿍 스튜디오 · Kokoong Studio</p>
+  <p class="copy">&copy; 2025 Kokoong Studio. All rights reserved.</p>
+</footer>
+
+<script>
+// Scroll reveal
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+}, { threshold: 0.15 });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
