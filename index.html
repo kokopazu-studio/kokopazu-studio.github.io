@@ -4,7 +4,58 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>코코파즈 스튜디오 | Kokopazu Studio</title>
-<meta name="description" content="코코파즈 스튜디오 - Save Princess Torosso 개발">
+<meta name="description" content="코코파즈 스튜디오 - Fantasy RPG 'Save Princess Torosso' 개발. Kokopazu Studio develops unforgettable fantasy adventure games.">
+<meta name="keywords" content="Kokopazu Studio, 코코파즈 스튜디오, Save Princess Torosso, Fantasy RPG, Indie Game, 인디게임, Unity">
+<meta name="author" content="Kokopazu Studio">
+<link rel="canonical" href="https://kokopazu-studio.github.io/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="코코파즈 스튜디오 | Kokopazu Studio">
+<meta property="og:description" content="작은 스튜디오에서 시작하는 잊지 못할 모험 이야기. Fantasy RPG 'Save Princess Torosso' 개발 중.">
+<meta property="og:url" content="https://kokopazu-studio.github.io/">
+<meta property="og:site_name" content="Kokopazu Studio">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:locale:alternate" content="en_US">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="코코파즈 스튜디오 | Kokopazu Studio">
+<meta name="twitter:description" content="작은 스튜디오에서 시작하는 잊지 못할 모험 이야기. Fantasy RPG 'Save Princess Torosso' 개발 중.">
+
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Kokopazu Studio",
+  "alternateName": "코코파즈 스튜디오",
+  "url": "https://kokopazu-studio.github.io/",
+  "description": "Fantasy RPG 'Save Princess Torosso'를 개발하는 인디 게임 스튜디오",
+  "foundingDate": "2025",
+  "sameAs": [
+    "https://x.com/"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoGame",
+  "name": "Save Princess Torosso",
+  "description": "왕국에 드리운 어둠 속에서, 공주를 구하기 위한 여정이 시작되는 판타지 RPG",
+  "genre": "Fantasy RPG",
+  "gamePlatform": "PC (Windows)",
+  "operatingSystem": "Windows",
+  "applicationCategory": "Game",
+  "author": {
+    "@type": "Organization",
+    "name": "Kokopazu Studio"
+  },
+  "gameEngine": "Unity 6 URP"
+}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -34,6 +85,37 @@ body::after{
   opacity:0.03;
   background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
+
+/* --- Language Toggle --- */
+.lang-toggle{
+  position:fixed;top:1.5rem;right:1.5rem;z-index:1000;
+  display:flex;gap:0;
+  border:1px solid rgba(201,168,76,0.4);
+  background:rgba(250,247,240,0.9);
+  backdrop-filter:blur(8px);
+  -webkit-backdrop-filter:blur(8px);
+}
+.lang-toggle button{
+  font-family:'Cinzel',serif;font-size:0.7rem;letter-spacing:0.15em;
+  padding:0.5em 1.2em;
+  border:none;background:transparent;
+  color:var(--ink-light);cursor:pointer;
+  transition:all 0.3s ease;
+}
+.lang-toggle button.active{
+  background:var(--gold);color:var(--cream);
+}
+.lang-toggle button:hover:not(.active){
+  background:rgba(201,168,76,0.1);
+}
+
+/* Hide language content */
+[data-lang-en]{display:none}
+html[lang="en"] [data-lang-ko]{display:none}
+html[lang="en"] [data-lang-en]{display:block}
+html[lang="en"] span[data-lang-en],
+html[lang="en"] strong[data-lang-en]{display:inline}
+html[lang="en"] dd[data-lang-en]{display:block}
 
 /* --- Header / Hero --- */
 .hero{
@@ -219,10 +301,17 @@ footer .copy{
   .game-card{padding:2rem}
   .game-meta{gap:1.2rem}
   .link-list{flex-direction:column;align-items:center}
+  .lang-toggle{top:1rem;right:1rem}
 }
 </style>
 </head>
 <body>
+
+<!-- Language Toggle -->
+<div class="lang-toggle" role="group" aria-label="Language selector">
+  <button class="active" data-lang="ko" aria-pressed="true">KO</button>
+  <button data-lang="en" aria-pressed="false">EN</button>
+</div>
 
 <!-- Hero -->
 <section class="hero">
@@ -231,10 +320,14 @@ footer .copy{
   <div class="flourish bl"></div>
   <div class="flourish br"></div>
 
-  <div class="studio-mark"><span>코코파즈 스튜디오</span></div>
+  <div class="studio-mark">
+    <span data-lang-ko>코코파즈 스튜디오</span>
+    <span data-lang-en>Kokopazu Studio</span>
+  </div>
   <h1>Kokopazu<br>Studio</h1>
   <div class="divider"></div>
-  <p class="hero-sub">작은 스튜디오에서 시작하는<br>잊지 못할 모험 이야기</p>
+  <p class="hero-sub" data-lang-ko>작은 스튜디오에서 시작하는<br>잊지 못할 모험 이야기</p>
+  <p class="hero-sub" data-lang-en>Unforgettable adventures<br>from a small studio</p>
   <span class="scroll-hint">Scroll</span>
 </section>
 
@@ -242,10 +335,15 @@ footer .copy{
 <section class="about">
   <div class="container reveal">
     <div class="section-label">About</div>
-    <p>
+    <p data-lang-ko>
       <strong>코코파즈 스튜디오</strong>는 플레이어의 마음에 오래 남는 이야기를 만듭니다.<br>
       판타지 세계 속에서 펼쳐지는 모험과 감동을 통해,<br>
       작지만 진심이 담긴 게임을 세상에 전합니다.
+    </p>
+    <p data-lang-en>
+      <strong>Kokopazu Studio</strong> creates stories that stay in players' hearts.<br>
+      Through adventure and emotion set in fantasy worlds,<br>
+      we deliver small but heartfelt games to the world.
     </p>
   </div>
 </section>
@@ -255,12 +353,18 @@ footer .copy{
   <div class="container reveal">
     <div class="section-label">Our Game</div>
     <div class="game-card">
-      <span class="game-tag">In Development</span>
+      <span class="game-tag" data-lang-ko>개발 중</span>
+      <span class="game-tag" data-lang-en>In Development</span>
       <h3>Save Princess Torosso</h3>
-      <p>
+      <p data-lang-ko>
         왕국에 드리운 어둠 속에서, 공주를 구하기 위한 여정이 시작됩니다.
         신비로운 세계를 탐험하고 동료를 만나며,
         잊혀진 마법의 비밀을 풀어가는 판타지 RPG.
+      </p>
+      <p data-lang-en>
+        In a kingdom shrouded in darkness, a journey to save the princess begins.
+        Explore a mystical world, meet companions,
+        and unravel the secrets of forgotten magic in this fantasy RPG.
       </p>
       <dl class="game-meta">
         <div>
@@ -277,7 +381,8 @@ footer .copy{
         </div>
         <div>
           <dt>Status</dt>
-          <dd>개발 중</dd>
+          <dd data-lang-ko>개발 중</dd>
+          <dd data-lang-en>In Development</dd>
         </div>
       </dl>
     </div>
@@ -297,7 +402,7 @@ footer .copy{
 <!-- Footer -->
 <footer>
   <p>코코파즈 스튜디오 · Kokopazu Studio</p>
-  <p class="copy">&copy; 2025 Kokopazu Studio. All rights reserved.</p>
+  <p class="copy">&copy; 2026 Kokopazu Studio. All rights reserved.</p>
 </footer>
 
 <script>
@@ -306,6 +411,21 @@ const obs = new IntersectionObserver((entries) => {
   entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
 }, { threshold: 0.15 });
 document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+// Language toggle
+const langBtns = document.querySelectorAll('.lang-toggle button');
+langBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const lang = btn.dataset.lang;
+    document.documentElement.lang = lang;
+    langBtns.forEach(b => {
+      b.classList.remove('active');
+      b.setAttribute('aria-pressed', 'false');
+    });
+    btn.classList.add('active');
+    btn.setAttribute('aria-pressed', 'true');
+  });
+});
 </script>
 </body>
 </html>
