@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /demo/
+Disallow: /wishlist/
+Disallow: /discord/
 
-Sitemap: https://kokopazu-studio.github.io/sitemap.xml
+Sitemap: https://kokopazu.com/sitemap.xml

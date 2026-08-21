@@ -1,0 +1,156 @@
+{
+ "hero-poster": {
+  "w": 1920,
+  "h": 1080,
+  "widths": [
+   1920,
+   1280,
+   960
+  ],
+  "jpg_only": false
+ },
+ "loop-combat": {
+  "w": 1152,
+  "h": 720,
+  "widths": [
+   1152,
+   640
+  ],
+  "jpg_only": false
+ },
+ "loop-gate": {
+  "w": 1152,
+  "h": 720,
+  "widths": [
+   1152,
+   640
+  ],
+  "jpg_only": false
+ },
+ "boss-minotaur": {
+  "w": 1152,
+  "h": 720,
+  "widths": [
+   1152,
+   640
+  ],
+  "jpg_only": false
+ },
+ "plat-climb": {
+  "w": 1280,
+  "h": 720,
+  "widths": [
+   1280,
+   640
+  ],
+  "jpg_only": false
+ },
+ "spell-projectile": {
+  "w": 1152,
+  "h": 720,
+  "widths": [
+   1152,
+   640
+  ],
+  "jpg_only": false
+ },
+ "spell-aoe": {
+  "w": 1152,
+  "h": 720,
+  "widths": [
+   1152,
+   640
+  ],
+  "jpg_only": false
+ },
+ "spell-summon": {
+  "w": 1152,
+  "h": 720,
+  "widths": [
+   1152,
+   640
+  ],
+  "jpg_only": false
+ },
+ "spell-shield": {
+  "w": 1152,
+  "h": 720,
+  "widths": [
+   1152,
+   640
+  ],
+  "jpg_only": false
+ },
+ "plat-horse": {
+  "w": 1280,
+  "h": 720,
+  "widths": [
+   1280,
+   640
+  ],
+  "jpg_only": false
+ },
+ "plat-dragon": {
+  "w": 1280,
+  "h": 720,
+  "widths": [
+   1280,
+   640
+  ],
+  "jpg_only": false
+ },
+ "plat-barrel": {
+  "w": 1280,
+  "h": 720,
+  "widths": [
+   1280,
+   640
+  ],
+  "jpg_only": false
+ },
+ "plat-cannon": {
+  "w": 1280,
+  "h": 720,
+  "widths": [
+   1280,
+   640
+  ],
+  "jpg_only": false
+ },
+ "plat-stairs": {
+  "w": 1280,
+  "h": 720,
+  "widths": [
+   1280,
+   640
+  ],
+  "jpg_only": false
+ },
+ "char-haeon": {
+  "w": 480,
+  "h": 600,
+  "widths": [
+   480,
+   240
+  ],
+  "jpg_only": false
+ },
+ "char-torosso": {
+  "w": 480,
+  "h": 600,
+  "widths": [
+   480,
+   240
+  ],
+  "jpg_only": false
+ },
+ "char-darkknight": {
+  "w": 480,
+  "h": 600,
+  "widths": [
+   480,
+   240
+  ],
+  "jpg_only": false
+ }
+}

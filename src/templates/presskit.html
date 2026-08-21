@@ -1,0 +1,132 @@
+{% extends "base.html" %}
+{% block head %}
+<style>
+[data-lang-ko]{display:none!important}
+html[lang="ko"] [data-lang-ko]{display:revert!important}
+html[lang="ko"] [data-lang-en]{display:none!important}
+</style>
+{% endblock %}
+{% block main %}
+<section class="pk-hero">
+  <div class="container">
+    <p class="kicker">Presskit</p>
+    <h1><picture><source type="image/webp" srcset="/assets/logo/title-gold.webp"><img class="logo-title" src="/assets/logo/title-gold.png" alt="Save Princess Torosso" width="1057" height="742"></picture></h1>
+    <p class="lead"><span data-lang-en>{{ en.hero.hook }} {{ en.hero.sub_1 }}</span><span data-lang-ko>{{ ko.hero.hook }} {{ ko.hero.sub_1 }}</span></p>
+    <div class="cta">
+      <a class="btn primary" href="/presskit/presskit-save-princess-torosso.zip"><span data-lang-en>Download presskit (.zip)</span><span data-lang-ko>프레스킷 내려받기 (.zip)</span></a>
+      <a class="btn" href="{{ steam_press('presskit_hero') }}" target="_blank" rel="noopener">Steam</a>
+    </div>
+  </div>
+</section>
+
+<nav class="pk-nav" aria-label="Presskit sections">
+  <a href="#factsheet">Factsheet</a><a href="#description">Description</a><a href="#media">Images &amp; Video</a><a href="#logos">Logos</a><a href="#press-release">Press release</a><a href="#contact">Contact</a>
+</nav>
+
+<section id="factsheet" class="pk">
+  <div class="container pk-grid">
+    <div>
+      <h2 class="h2 display-en">Factsheet</h2>
+      <table class="facts-table">
+        <tr><th>Developer</th><td>{{ f.studio.name_en }} · <span data-lang-en>solo indie studio, {{ f.studio.country_en }}</span><span data-lang-ko>1인 인디 스튜디오, {{ f.studio.country_ko }}</span></td></tr>
+        <tr><th>Genre</th><td><span data-lang-en>{{ f.game.genre_en }}</span><span data-lang-ko>{{ f.game.genre_ko }}</span></td></tr>
+        <tr><th>Platform</th><td><span data-lang-en>{{ f.platforms.display_en }}</span><span data-lang-ko>{{ f.platforms.display_ko }}</span></td></tr>
+        <tr><th>Release</th><td><span data-lang-en>{{ 'Released' if released else f.release.display_en + ' (planned)' }}</span><span data-lang-ko>{{ '출시됨' if released else f.release.display_ko + ' 예정' }}</span></td></tr>
+        <tr><th>Demo</th><td><span data-lang-en>Available now on Steam</span><span data-lang-ko>Steam에서 플레이 가능</span></td></tr>
+        {% if f.price.show %}<tr><th>Price</th><td>{{ f.price.display }}</td></tr>{% endif %}
+        <tr><th>Languages</th><td><span data-lang-en>{{ languages_list_en }}</span><span data-lang-ko>{{ languages_list_ko }}</span></td></tr>
+        <tr><th>Controls</th><td><span data-lang-en>{{ en.hero.meta_controls }}</span><span data-lang-ko>{{ ko.hero.meta_controls }}</span></td></tr>
+        <tr><th>Engine</th><td>{{ f.game.engine }}</td></tr>
+        <tr><th>Steam</th><td><a href="{{ steam_press('factsheet') }}" target="_blank" rel="noopener">store.steampowered.com/app/{{ f.game.steam_appid }}</a></td></tr>
+        <tr><th>Website</th><td><a href="{{ f.links.site }}">{{ f.links.site | replace('https://','') }}</a></td></tr>
+        <tr><th>Email</th><td><a href="mailto:{{ f.studio.email }}">{{ f.studio.email }}</a></td></tr>
+        <tr><th>Discord</th><td><a href="{{ f.links.discord_en }}" target="_blank" rel="noopener">English</a> · <a href="{{ f.links.discord_ko }}" target="_blank" rel="noopener">한국어</a></td></tr>
+        <tr><th>Social</th><td><a href="{{ f.links.youtube }}" target="_blank" rel="noopener">YouTube</a> · <a href="{{ f.links.x }}" target="_blank" rel="noopener">X</a> · <a href="{{ f.links.facebook }}" target="_blank" rel="noopener">Facebook</a></td></tr>
+      </table>
+    </div>
+    <div id="description">
+      <h2 class="h2 display-en">Description</h2>
+      <p data-lang-en><strong>{{ en.hero.hook }}</strong> {{ en.hero.sub_1 }} {{ en.hero.sub_2 }}</p>
+      <p data-lang-ko><strong>{{ ko.hero.hook }}</strong> {{ ko.hero.sub_1 }} {{ ko.hero.sub_2 }}</p>
+      <p data-lang-en>{{ en.loop.lead }} {{ en.magic.lead }}</p>
+      <p data-lang-ko>{{ ko.loop.lead }} {{ ko.magic.lead }}</p>
+      <h3 data-lang-en>Key features</h3><h3 data-lang-ko>핵심 특징</h3>
+      <ul class="features">
+        <li data-lang-en>Magic-only combat — projectile, area, summon and shield spells; no melee weapons.</li><li data-lang-ko>마법 전용 전투 — 투사체·광역·소환·방어막, 근접 무기 없음.</li>
+        <li data-lang-en>Skill cards: stack the same card to grow stronger; summon and shield auto-cast on pickup.</li><li data-lang-ko>스킬 카드: 같은 카드를 모으면 강화, 소환·방어막은 획득 즉시 자동 발동.</li>
+        <li data-lang-en>Stage loop: clear the target enemies, the gate opens, a boss guards the end of each chapter.</li><li data-lang-ko>스테이지 루프: 목표 적 처치 → 문 개방 → 챕터 끝의 보스.</li>
+        <li data-lang-en>Obstacle sections between chapters — horseback bridge, dragon flight, barrel ladders, cannonballs, slippery stairs.</li><li data-lang-ko>챕터 사이 장애물 구간 — 말 다리, 드래곤 비행, 배럴 사다리, 대포알, 미끄러운 계단.</li>
+        <li data-lang-en>Full-game clear-time leaderboard on Steam.</li><li data-lang-ko>본편 클리어 타임 Steam 순위표.</li>
+        <li data-lang-en>Free demo available on Steam now.</li><li data-lang-ko>Steam에서 무료 데모 플레이 가능.</li>
+      </ul>
+      <h3 data-lang-en>Story</h3><h3 data-lang-ko>스토리</h3>
+      {% for p in en.story.p %}<p data-lang-en>{{ p }}</p>{% endfor %}
+      {% for p in ko.story.p %}<p data-lang-ko>{{ p }}</p>{% endfor %}
+    </div>
+  </div>
+</section>
+
+<section id="media" class="pk pk-alt">
+  <div class="container">
+    <h2 class="h2 display-en">Images &amp; Video</h2>
+    <p class="lead"><span data-lang-en>Click an image to open the full-size file. All media may be used for editorial and promotional coverage with credit to {{ f.studio.name_en }}.</span><span data-lang-ko>이미지를 클릭하면 원본 크기로 열립니다. 모든 자료는 {{ f.studio.name_ko }} 출처 표기와 함께 기사·홍보 목적으로 사용할 수 있습니다.</span></p>
+    <h3>Key art</h3>
+    <div class="pk-gallery">
+      {% for k in presskit_keyart %}<a href="/assets/presskit/{{ k.file }}" target="_blank" rel="noopener"><img src="/assets/presskit/thumbs/{{ k.thumb }}" alt="{{ k.label }}" loading="lazy" width="640" height="360"><span>{{ k.label }}</span></a>{% endfor %}
+    </div>
+    <h3>Screenshots</h3>
+    <div class="pk-gallery">
+      {% for s in presskit_shots %}<a href="/assets/presskit/{{ s.file }}" target="_blank" rel="noopener"><img src="/assets/presskit/thumbs/{{ s.thumb }}" alt="{{ s.label }}" loading="lazy" width="640" height="360"><span>{{ s.label }}</span></a>{% endfor %}
+    </div>
+    <h3>Video</h3>
+    <p data-lang-en>Gameplay videos: <a href="{{ f.links.youtube }}" target="_blank" rel="noopener">{{ f.links.youtube | replace('https://www.','') }}</a>{% if f.trailer.youtube_id %} · Official trailer: <a href="https://www.youtube.com/watch?v={{ f.trailer.youtube_id }}" target="_blank" rel="noopener">youtu.be/{{ f.trailer.youtube_id }}</a>{% else %} — new official trailer coming soon.{% endif %}</p>
+    <p data-lang-ko>게임플레이 영상: <a href="{{ f.links.youtube }}" target="_blank" rel="noopener">{{ f.links.youtube | replace('https://www.','') }}</a>{% if f.trailer.youtube_id %} · 공식 트레일러: <a href="https://www.youtube.com/watch?v={{ f.trailer.youtube_id }}" target="_blank" rel="noopener">youtu.be/{{ f.trailer.youtube_id }}</a>{% else %} — 새 공식 트레일러 준비 중.{% endif %}</p>
+  </div>
+</section>
+
+<section id="logos" class="pk">
+  <div class="container">
+    <h2 class="h2 display-en">Logos</h2>
+    <div class="logo-grid">
+      <a class="logo-item dark" href="/assets/logo/title-gold.png" target="_blank" rel="noopener"><img src="/assets/logo/title-gold.png" alt="Save Princess Torosso gold logo"><span>Game logo — gold (PNG, transparent)</span></a>
+      <a class="logo-item dark" href="/assets/logo/title-white.png" target="_blank" rel="noopener"><img src="/assets/logo/title-white.png" alt="Save Princess Torosso white logo"><span>Game logo — white (PNG, transparent)</span></a>
+      <a class="logo-item dark" href="/assets/logo/studio-mark.png" target="_blank" rel="noopener"><img src="/assets/logo/studio-mark.png" alt="Kokopazu Studio mark"><span>Studio mark (PNG, transparent)</span></a>
+      <a class="logo-item dark" href="/assets/logo/studio-wordmark-en.png" target="_blank" rel="noopener"><img src="/assets/logo/studio-wordmark-en.png" alt="KOKOPAZU STUDIO wordmark"><span>Studio wordmark EN (PNG, transparent)</span></a>
+      <a class="logo-item dark" href="/assets/logo/studio-wordmark-ko.png" target="_blank" rel="noopener"><img src="/assets/logo/studio-wordmark-ko.png" alt="코코파즈 스튜디오 워드마크"><span>Studio wordmark KO (PNG, transparent)</span></a>
+    </div>
+  </div>
+</section>
+
+<section id="press-release" class="pk pk-alt">
+  <div class="container narrow">
+    <h2 class="h2 display-en">Press release</h2>
+    <article class="press-release">
+      <h3 data-lang-en>Solo developer's fantasy 3D action adventure "Save Princess Torosso" coming to Steam in {{ f.release.display_en }} — free demo available now</h3>
+      <h3 data-lang-ko>1인 인디 개발자의 판타지 3D 액션 어드벤처 "Save Princess Torosso", {{ f.release.display_ko }} Steam 출시 예정 — 무료 데모 공개 중</h3>
+      <p class="date">2026 · {{ f.studio.name_en }}</p>
+      <p data-lang-en><strong>{{ f.studio.country_en }}</strong> — {{ f.studio.name_en }}, a one-person indie studio, has opened the Steam store page and a free demo for <em>Save Princess Torosso</em>, a fantasy 3D action adventure targeting a PC Windows / Steam release in {{ f.release.display_en }}, with a STOVE release to follow.</p>
+      <p data-lang-ko><strong>{{ f.studio.country_ko }}</strong> — 1인 인디 스튜디오 {{ f.studio.name_ko }}가 판타지 3D 액션 어드벤처 <em>Save Princess Torosso</em>의 Steam 상점 페이지와 무료 데모를 공개했습니다. 게임은 {{ f.release.display_ko }} PC Windows / Steam 출시를 목표로 하며, 이후 STOVE 출시도 예정되어 있습니다.</p>
+      <p data-lang-en>{{ en.hero.hook }} {{ en.hero.sub_1 }} {{ en.hero.sub_2 }} {{ en.magic.lead }}</p>
+      <p data-lang-ko>{{ ko.hero.hook }} {{ ko.hero.sub_1 }} {{ ko.hero.sub_2 }} {{ ko.magic.lead }}</p>
+      <p data-lang-en>{{ en.traverse.lead }} {{ en.leaderboard.body }}</p>
+      <p data-lang-ko>{{ ko.traverse.lead }} {{ ko.leaderboard.body }}</p>
+      <p><a href="{{ steam_press('press_release') }}" target="_blank" rel="noopener">{{ f.links.steam }}</a></p>
+    </article>
+  </div>
+</section>
+
+<section id="contact" class="pk">
+  <div class="container">
+    <h2 class="h2 display-en">Contact</h2>
+    <div class="contact-grid">
+      <div class="contact-card"><span class="label">Email</span><a href="mailto:{{ f.studio.email }}">{{ f.studio.email }}</a></div>
+      <div class="contact-card"><span class="label">Website</span><a href="{{ f.links.site }}">{{ f.links.site | replace('https://','') }}</a></div>
+      <div class="contact-card"><span class="label">Steam</span><a href="{{ steam_press('contact') }}" target="_blank" rel="noopener">Save Princess Torosso</a></div>
+      <div class="contact-card"><span class="label">Discord</span><a href="{{ f.links.discord_en }}" target="_blank" rel="noopener">English server</a><br><a href="{{ f.links.discord_ko }}" target="_blank" rel="noopener">한국어 서버</a></div>
+      <div class="contact-card"><span class="label">YouTube</span><a href="{{ f.links.youtube }}" target="_blank" rel="noopener">@kokopazustudio</a></div>
+      <div class="contact-card"><span class="label">X</span><a href="{{ f.links.x }}" target="_blank" rel="noopener">@kokopazustudio</a></div>
+      <div class="contact-card"><span class="label">Facebook</span><a href="{{ f.links.facebook }}" target="_blank" rel="noopener">{{ f.studio.name_en }}</a></div>
+    </div>
+  </div>
+</section>
+{% endblock %}

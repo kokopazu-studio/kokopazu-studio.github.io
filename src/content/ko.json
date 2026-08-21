@@ -1,0 +1,157 @@
+{
+  "lang": "ko",
+  "html_lang": "ko",
+  "other_lang": "en",
+  "other_lang_label": "EN",
+  "other_lang_url": "/en/",
+  "lang_banner": "Read this page in English →",
+
+  "nav": {
+    "game": "게임", "magic": "마법", "traverse": "돌파", "story": "스토리", "demo": "데모", "press": "프레스",
+    "wishlist": "위시리스트", "free_demo": "무료 데모", "skip": "본문으로 건너뛰기"
+  },
+
+  "hero": {
+    "chip_demo": "Steam 데모 플레이 가능",
+    "chip_release": "2026년 11월 출시 예정",
+    "chip_released": "Steam 출시 중",
+    "logo_alt": "Save Princess Torosso",
+    "hook": "검은 없습니다. 오직 마법뿐.",
+    "sub_1": "빌드 고민 없이 바로 쏘고, 피하고, 돌파하는 판타지 3D 액션 어드벤처.",
+    "sub_2": "빛의 마법사가 되어 감옥섬에 갇힌 토로소 공주를 구하세요.",
+    "cta_wishlist": "Steam 위시리스트 추가",
+    "cta_buy": "Steam에서 구매",
+    "cta_demo": "무료 데모 플레이",
+    "meta_platform": "PC Windows · Steam → STOVE",
+    "meta_languages": "11개 언어",
+    "meta_controls": "게임패드 권장",
+    "scroll": "Scroll",
+    "video_label": "게임플레이 영상: 잔디·화산·얼음·사막 전투"
+  },
+
+  "trailer": {
+    "kicker": "Trailer",
+    "h2": "30초면 충분합니다.",
+    "lead": "마법 전투, 장애물 돌파, 보스전 — 실제 플레이 영상으로 확인하세요.",
+    "play": "트레일러 재생"
+  },
+
+  "loop": {
+    "kicker": "How it plays",
+    "h2": "적을 처치하라. 문이 열린다.",
+    "lead": "복잡한 빌드 연구 대신, 조준하고 · 처치하고 · 보스를 쓰러뜨리고 · 돌파하는 흐름이 엔딩까지 끊기지 않습니다.",
+    "steps": [
+      {"n": "01", "title": "조준하고 시전", "body": "몰려오는 적을 원거리 마법으로 상대합니다.", "img": "loop-combat", "alt": "잔디 평원에서 마법으로 적 무리를 공격하는 장면"},
+      {"n": "02", "title": "목표 처치 → 문 개방", "body": "지정된 적을 처치하면 다음 스테이지의 문이 열립니다.", "img": "loop-gate", "alt": "목표를 달성하자 열리는 성벽의 문"},
+      {"n": "03", "title": "보스 격파", "body": "각 챕터의 끝에는 보스가 기다립니다.", "img": "boss-minotaur", "alt": "미노타우로스 보스"},
+      {"n": "04", "title": "장애물 돌파", "body": "보스를 넘으면 다음 챕터로 이어지는 장애물 구간이 시작됩니다. 말·드래곤·사다리·대포알이 리듬을 바꿉니다.", "img": "plat-climb", "alt": "절벽의 나무 구조물을 오르는 장면"}
+    ]
+  },
+
+  "magic": {
+    "kicker": "Magic system",
+    "h2": "네 종류의 스킬 카드로 싸웁니다.",
+    "lead": "투사체와 광역은 같은 카드를 모을수록 강해지고, 소환과 방어막은 카드를 얻는 순간 자동으로 발동합니다.",
+    "badge_manual": "수동 · 강화",
+    "badge_auto": "자동 발동",
+    "cards": [
+      {"name": "Projectile", "sub": "투사체", "auto": false, "body": "원거리 단일 타깃을 빠르게 압박합니다. 맞힐수록 마나가 찹니다.", "img": "spell-projectile", "clip": "clip-combat-grass", "alt": "투사체 마법을 발사하는 장면"},
+      {"name": "Area", "sub": "광역", "auto": false, "body": "모인 마나로 무리를 한 번에 쓸어버립니다.", "img": "spell-aoe", "clip": "clip-combat-volcano", "alt": "광역 마법이 적 무리를 덮치는 장면"},
+      {"name": "Summon", "sub": "소환", "auto": true, "body": "카드를 얻는 순간 아군 소환수가 전장에 합류합니다.", "img": "spell-summon", "clip": "", "alt": "소환 마법 장면"},
+      {"name": "Shield", "sub": "방어막", "auto": true, "body": "피해를 막아 위기를 넘깁니다.", "img": "spell-shield", "clip": "", "alt": "방어막 마법 장면"}
+    ],
+    "mana_b": "마나 루프",
+    "mana": "기본 공격으로 맞혀 마나를 회수하고, 모인 마나로 광역을 터뜨립니다. 공부할 빌드는 없습니다."
+  },
+
+  "traverse": {
+    "kicker": "Platforming",
+    "h2": "전투가 끝나면, 길이 바뀝니다.",
+    "lead": "챕터 사이마다 조작과 리듬이 달라지는 장애물 구간이 기다립니다. 점프, 이동, 타이밍, 탈것 조작으로 다음 지역에 닿으세요.",
+    "hover_hint": "마우스를 올리면 실제 플레이 클립이 재생됩니다.",
+    "tiles": [
+      {"title": "말 타고 무너지는 다리 건너기", "img": "plat-horse", "clip": "clip-horse"},
+      {"title": "드래곤 공중전", "img": "plat-dragon", "clip": "clip-dragon"},
+      {"title": "배럴이 떨어지는 사다리", "img": "plat-barrel", "clip": "clip-barrel"},
+      {"title": "굴러오는 대포알", "img": "plat-cannon", "clip": "clip-cannon"},
+      {"title": "미끄러지는 계단", "img": "plat-stairs", "clip": "clip-stairs"},
+      {"title": "장애물 등반", "img": "plat-climb", "clip": "clip-climb"}
+    ]
+  },
+
+  "story": {
+    "kicker": "Story",
+    "h2": "빛과 어둠의 혈통이 아직 세상에 남아 있던 시대.",
+    "p": [
+      "오만한 제국의 왕자는 토로소 공주에게 청혼을 거절당하자 어둠의 힘을 빌려 왕국을 침략하고, 공주를 저주받은 감옥 섬으로 끌고 갑니다.",
+      "공주와 특별한 인연을 맺어온 젊은 빛의 마법사는 사랑, 죄책감, 그리고 사명을 안고 홀로 바다를 건넙니다.",
+      "이제 어둠의 운명을 당신의 손으로 끊어낼 시간입니다."
+    ],
+    "characters": [
+      {"name": "해온", "role": "빛의 마법사", "body": "빛의 혈통을 이어받은 떠돌이 마법사. 검 대신 지팡이와 새벽 인장석으로 싸웁니다.", "img": "char-haeon", "alt": "주인공 해온"},
+      {"name": "토로소 공주", "role": "구출 대상", "body": "작은 왕국의 공주이자 봉인의 인장을 지켜온 왕가의 후예. 위기 속에서 누구보다 먼저 백성을 챙깁니다.", "img": "char-torosso", "alt": "토로소 공주"},
+      {"name": "다크나이트", "role": "타락한 왕자", "body": "어둠의 힘을 받아들인 제국의 왕자. 그 끝에서 무엇이 되었는지는 감옥섬에서 확인하세요.", "img": "char-darkknight", "alt": "다크나이트"}
+    ]
+  },
+
+  "leaderboard": {
+    "kicker": "Clear-time leaderboard",
+    "h2": "당신은 얼마나 빨리 공주를 구할 수 있나요?",
+    "body": "게임을 완료하면 클리어 타임이 Steam 순위표에 기록됩니다. 다시 도전하며 동선을 다듬고, 실수를 줄이고, 가장 빠른 구출에 도전하세요.",
+    "button": "Steam 순위표 보기",
+    "note_coming": "순위표는 정식 출시와 함께 열립니다."
+  },
+
+  "demo": {
+    "kicker": "Free demo",
+    "h2": "지금 Steam에서 무료 데모를 플레이하세요.",
+    "lead": "마음에 들었다면 위시리스트에 추가해 출시 알림을 받으세요.",
+    "lead_released": "데모로 먼저 해보고, 마음에 들었다면 본편으로 이어가세요.",
+    "cta_demo": "무료 데모 플레이",
+    "cta_wishlist": "Steam 위시리스트 추가",
+    "cta_buy": "Steam에서 구매"
+  },
+
+  "release": {
+    "kicker": "Release",
+    "h2": "2026년 11월, Steam에서 만나요.",
+    "h2_released": "Steam에서 지금 플레이할 수 있습니다.",
+    "rows": {
+      "release": "출시", "release_v": "2026년 11월 예정", "release_v_released": "출시됨",
+      "platform": "플랫폼", "platform_v": "PC Windows · Steam(1차) → STOVE(2차)",
+      "price": "가격",
+      "languages": "언어", "languages_prefix": "11개 언어 — ",
+      "controls": "조작", "controls_v": "게임패드 권장",
+      "spec": "최소 사양"
+    }
+  },
+
+  "studio": {
+    "kicker": "Studio",
+    "h2": "코코파즈 스튜디오",
+    "body": "코코파즈 스튜디오는 1인 인디게임 개발 스튜디오입니다. \"모험 게임에는 반드시 복잡한 스킬트리와 무기 조합이 필요할까?\"라는 질문에서 출발해, 플레이 흐름이 끊기지 않는 판타지 3D 액션 어드벤처를 만듭니다. 첫 작품 Save Princess Torosso는 직관적인 성장과 원거리 마법 전투에 플랫폼 돌파의 재미를 결합해, 엔딩까지 몰입해서 완주할 수 있는 경험을 목표로 합니다.",
+    "developer_label": "개발",
+    "developer": "1인 개발 · KOKOPAZU",
+    "contact_label": "연락처",
+    "press_label": "프레스",
+    "press_body": "로고, 스크린샷, 팩트시트는 프레스킷에서 내려받을 수 있습니다.",
+    "cta_presskit": "프레스킷 보기",
+    "cta_email": "이메일 보내기"
+  },
+
+  "footer": {
+    "copyright": "© 2026 Kokopazu Studio. All rights reserved.",
+    "links": {"steam": "Steam", "discord_en": "Discord (EN)", "discord_ko": "Discord (KO)", "youtube": "YouTube", "x": "X", "facebook": "Facebook", "presskit": "프레스킷"}
+  },
+
+  "redirects": {
+    "title": "이동 중…",
+    "body": "잠시 후 이동합니다. 자동으로 이동하지 않으면 아래 링크를 눌러주세요."
+  },
+
+  "notfound": {
+    "title": "페이지를 찾을 수 없습니다",
+    "body": "주소가 바뀌었거나 삭제된 페이지입니다.",
+    "home": "홈으로"
+  }
+}

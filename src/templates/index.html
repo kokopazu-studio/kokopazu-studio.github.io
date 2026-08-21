@@ -1,0 +1,203 @@
+{% extends "base.html" %}
+{% block main %}
+<section class="hero" id="hero">
+  <div class="hero-media" aria-hidden="true">
+    <video id="heroVideo" autoplay muted loop playsinline preload="metadata" poster="/assets/img/hero-poster-1280.webp"
+           data-src="/assets/video/hero-montage.mp4" data-src-small="/assets/video/hero-montage-960.mp4" aria-label="{{ c.hero.video_label }}">
+    </video>
+  </div>
+  <div class="hero-inner">
+    <div class="chips">
+      {% if released %}
+      <span class="chip live">{{ c.hero.chip_released }}</span>
+      <span class="chip">{{ c.hero.chip_demo }}</span>
+      {% else %}
+      <span class="chip live">{{ c.hero.chip_demo }}</span>
+      <span class="chip">{{ c.hero.chip_release }}</span>
+      {% endif %}
+    </div>
+    <h1><picture><source type="image/webp" srcset="/assets/logo/title-gold.webp"><img class="logo-title" src="/assets/logo/title-gold.png" alt="{{ c.hero.logo_alt }}" width="1057" height="742" fetchpriority="high"></picture></h1>
+    <p class="hook {{ 'display-ko' if c.lang == 'ko' else 'display-en' }}">{{ c.hero.hook }}</p>
+    <p class="sub">{{ c.hero.sub_1 }}<br>{{ c.hero.sub_2 }}</p>
+    <div class="cta">
+      {% if released %}
+      <a class="btn primary" href="{{ steam('hero_buy') }}" target="_blank" rel="noopener">{{ icon_steam | safe }}{{ c.hero.cta_buy }}</a>
+      {% else %}
+      <a class="btn primary" href="{{ steam('hero_wishlist') }}" target="_blank" rel="noopener">{{ icon_steam | safe }}{{ c.hero.cta_wishlist }}</a>
+      {% endif %}
+      <a class="btn" href="{{ demo('hero_demo') }}" target="_blank" rel="noopener">{{ icon_play | safe }}{{ c.hero.cta_demo }}</a>
+    </div>
+    <ul class="meta" aria-label="Facts">
+      <li>{{ c.hero.meta_languages }}</li>
+      <li>{{ c.hero.meta_controls }}</li>
+      {% if f.price.show %}<li>{{ f.price.display }}</li>{% endif %}
+    </ul>
+  </div>
+  <div class="scroll-cue" aria-hidden="true"><span></span>{{ c.hero.scroll }}</div>
+</section>
+
+{% if f.trailer.youtube_id %}
+<section class="trailer" id="trailer">
+  <div class="container">
+    <p class="kicker">{{ c.trailer.kicker }}</p>
+    <h2 class="h2 {{ 'display-ko' if c.lang == 'ko' else 'display-en' }} reveal">{{ c.trailer.h2 }}</h2>
+    <p class="lead reveal">{{ c.trailer.lead }}</p>
+    <div class="yt reveal" data-yt="{{ f.trailer.youtube_id }}" style="background-image:url('https://i.ytimg.com/vi/{{ f.trailer.youtube_id }}/maxresdefault.jpg')">
+      <button type="button" class="yt-play" aria-label="{{ c.trailer.play }}">{{ icon_play | safe }}</button>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<section class="loop" id="loop">
+  <div class="container">
+    <p class="kicker">{{ c.loop.kicker }}</p>
+    <h2 class="h2 {{ 'display-ko' if c.lang == 'ko' else 'display-en' }} reveal">{{ c.loop.h2 }}</h2>
+    <p class="lead reveal">{{ c.loop.lead }}</p>
+    <div class="steps">
+      {% for s in c.loop.steps %}
+      <article class="step reveal">
+        {{ img(s.img, s.alt, '(max-width:720px) 100vw, (max-width:1024px) 50vw, 280px') }}
+        <span class="num">{{ s.n }}</span>
+        <div><h3>{{ s.title }}</h3><p>{{ s.body }}</p></div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="magic" id="magic">
+  <div class="container">
+    <div class="head">
+      <div>
+        <p class="kicker">{{ c.magic.kicker }}</p>
+        <h2 class="h2 {{ 'display-ko' if c.lang == 'ko' else 'display-en' }} reveal">{{ c.magic.h2 }}</h2>
+      </div>
+      <p class="lead reveal">{{ c.magic.lead }}</p>
+    </div>
+    <div class="cards">
+      {% for k in c.magic.cards %}
+      <article class="card reveal">
+        <div class="media">
+          {{ img(k.img, k.alt, '(max-width:720px) 100vw, (max-width:1024px) 50vw, 280px') }}
+          {% if k.clip %}<video muted loop playsinline preload="none" data-src="/assets/video/{{ k.clip }}.mp4" aria-hidden="true"></video>{% endif %}
+          <span class="badge {{ 'auto' if k.auto else '' }}">{{ c.magic.badge_auto if k.auto else c.magic.badge_manual }}</span>
+        </div>
+        <div class="body"><h3>{{ k.name }}<small>{{ k.sub }}</small></h3><p>{{ k.body }}</p></div>
+      </article>
+      {% endfor %}
+    </div>
+    <div class="mana reveal"><span><b>{{ c.magic.mana_b }}</b> — {{ c.magic.mana }}</span></div>
+  </div>
+</section>
+
+<section class="traverse" id="traverse">
+  <div class="container">
+    <p class="kicker">{{ c.traverse.kicker }}</p>
+    <h2 class="h2 {{ 'display-ko' if c.lang == 'ko' else 'display-en' }} reveal">{{ c.traverse.h2 }}</h2>
+    <p class="lead reveal">{{ c.traverse.lead }} <span class="hover-hint">{{ c.traverse.hover_hint }}</span></p>
+    <div class="tiles">
+      {% for t in c.traverse.tiles %}
+      <div class="tile reveal">
+        {{ img(t.img, t.title, '(max-width:720px) 100vw, (max-width:1024px) 50vw, 373px') }}
+        {% if t.clip %}<video muted loop playsinline preload="none" data-src="/assets/video/{{ t.clip }}.mp4" aria-hidden="true"></video><i class="play" aria-hidden="true">▶</i>{% endif %}
+        <span>{{ t.title }}</span>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="story" id="story">
+  <div class="container">
+    <div class="story-grid">
+      <div>
+        <p class="kicker">{{ c.story.kicker }}</p>
+        <h2 class="h2 {{ 'display-ko' if c.lang == 'ko' else 'display-en' }} reveal">{{ c.story.h2 }}</h2>
+        {% for p in c.story.p %}<p class="lead reveal">{{ p }}</p>{% endfor %}
+      </div>
+      <div class="chars">
+        {% for ch in c.story.characters %}
+        <article class="char reveal">
+          <div><span class="role">{{ ch.role }}</span><h3>{{ ch.name }}</h3><p>{{ ch.body }}</p></div>
+        </article>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="leaderboard" id="leaderboard">
+  <div class="container lb-box reveal">
+    <div>
+      <p class="kicker">{{ c.leaderboard.kicker }}</p>
+      <h2 class="h2 {{ 'display-ko' if c.lang == 'ko' else 'display-en' }}">{{ c.leaderboard.h2 }}</h2>
+      <p class="lead">{{ c.leaderboard.body }}</p>
+    </div>
+    <div class="lb-cta">
+      {% if released %}
+      <a class="btn" href="{{ f.links.steam_leaderboard }}" target="_blank" rel="noopener">{{ c.leaderboard.button }}</a>
+      {% else %}
+      <p class="note">{{ c.leaderboard.note_coming }}</p>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<section class="demo" id="demo">
+  <div class="container">
+    <div class="box reveal">
+      <div>
+        <p class="kicker">{{ c.demo.kicker }}</p>
+        <h2 class="h2 {{ 'display-ko' if c.lang == 'ko' else 'display-en' }}">{{ c.demo.h2 }}</h2>
+        <p class="lead">{{ c.demo.lead_released if released else c.demo.lead }}</p>
+      </div>
+      <div class="btns">
+        <a class="btn" href="{{ demo('demo_section') }}" target="_blank" rel="noopener">{{ c.demo.cta_demo }}</a>
+        {% if released %}
+        <a class="btn primary" href="{{ steam('demo_section_buy') }}" target="_blank" rel="noopener">{{ c.demo.cta_buy }}</a>
+        {% else %}
+        <a class="btn primary" href="{{ steam('demo_section_wishlist') }}" target="_blank" rel="noopener">{{ c.demo.cta_wishlist }}</a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="release" id="release">
+  <div class="container">
+    <p class="kicker">{{ c.release.kicker }}</p>
+    <h2 class="h2 {{ 'display-ko' if c.lang == 'ko' else 'display-en' }} reveal">{{ c.release.h2_released if released else c.release.h2 }}</h2>
+    <dl class="spec-grid reveal">
+      <div class="spec"><dt>{{ c.release.rows.release }}</dt><dd>{{ c.release.rows.release_v_released if released else c.release.rows.release_v }}</dd></div>
+      <div class="spec"><dt>{{ c.release.rows.platform }}</dt><dd>{{ c.release.rows.platform_v }}</dd></div>
+      {% if f.price.show %}<div class="spec"><dt>{{ c.release.rows.price }}</dt><dd>{{ f.price.display }}</dd></div>{% endif %}
+      <div class="spec"><dt>{{ c.release.rows.controls }}</dt><dd>{{ c.release.rows.controls_v }}</dd></div>
+      <div class="spec wide"><dt>{{ c.release.rows.languages }}</dt><dd>{{ c.release.rows.languages_prefix }}{{ languages_list }}</dd></div>
+      <div class="spec wide"><dt>{{ c.release.rows.spec }}</dt><dd>{{ f.min_spec.os }} · {{ f.min_spec.cpu }} · {{ f.min_spec.ram }} RAM · {{ f.min_spec.gpu }} · {{ f.min_spec.directx }} · {{ f.min_spec.storage }}</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="studio" id="studio">
+  <div class="container studio-grid">
+    <div>
+      <p class="kicker">{{ c.studio.kicker }}</p>
+      <h2 class="h2 {{ 'display-ko' if c.lang == 'ko' else 'display-en' }} reveal">{{ c.studio.h2 }}</h2>
+      <p class="lead reveal">{{ c.studio.body }}</p>
+    </div>
+    <aside class="studio-card reveal">
+      <img src="/assets/logo/studio-mark-96.png" alt="" width="72" height="72">
+      <dl>
+        <dt>{{ c.studio.developer_label }}</dt><dd>{{ c.studio.developer }}</dd>
+        <dt>{{ c.studio.contact_label }}</dt><dd><a href="mailto:{{ f.studio.email }}">{{ f.studio.email }}</a></dd>
+        <dt>{{ c.studio.press_label }}</dt><dd>{{ c.studio.press_body }}</dd>
+      </dl>
+      <div class="btns">
+        <a class="btn" href="/presskit/">{{ c.studio.cta_presskit }}</a>
+        <a class="btn" href="mailto:{{ f.studio.email }}">{{ c.studio.cta_email }}</a>
+      </div>
+    </aside>
+  </div>
+</section>
+{% endblock %}

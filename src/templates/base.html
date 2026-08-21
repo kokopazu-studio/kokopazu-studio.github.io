@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="{{ c.html_lang }}">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ page_title }}</title>
+<meta name="description" content="{{ page_description }}">
+<meta name="author" content="{{ f.studio.name_en }}">
+<link rel="canonical" href="{{ canonical }}">
+{% if alt_ko %}<link rel="alternate" hreflang="ko" href="{{ alt_ko }}">{% endif %}
+{% if alt_en %}<link rel="alternate" hreflang="en" href="{{ alt_en }}">{% endif %}
+{% if alt_en %}<link rel="alternate" hreflang="x-default" href="{{ alt_en }}">{% endif %}
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#0b0908">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{ f.studio.name_en }}">
+<meta property="og:title" content="{{ page_title }}">
+<meta property="og:description" content="{{ og_description }}">
+<meta property="og:url" content="{{ canonical }}">
+<meta property="og:image" content="{{ f.seo.og_image }}?v={{ build_stamp }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="{{ 'ko_KR' if c.lang == 'ko' else 'en_US' }}">
+<meta property="og:locale:alternate" content="{{ 'en_US' if c.lang == 'ko' else 'ko_KR' }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ page_title }}">
+<meta name="twitter:description" content="{{ og_description }}">
+<meta name="twitter:image" content="{{ f.seo.og_image }}?v={{ build_stamp }}">
+
+<script type="application/ld+json">{{ jsonld | safe }}</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="preconnect" href="https://hangeul.pstatic.net" crossorigin>
+{% if page_kind == 'index' %}<link rel="preload" as="image" href="/assets/logo/title-gold.webp" type="image/webp" fetchpriority="high">{% endif %}
+<link rel="stylesheet" href="/assets/css/site.css?v={{ build_stamp }}">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" media="print" onload="this.media='all'">
+<noscript>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css">
+</noscript>
+{% block head %}{% endblock %}
+</head>
+<body{% if body_class %} class="{{ body_class }}"{% endif %}>
+<a class="skip-link" href="#main">{{ c.nav.skip }}</a>
+
+<div class="lang-banner" id="langBanner" hidden data-other="{{ c.other_lang }}">
+  <a href="{{ c.other_lang_url }}">{{ c.lang_banner }}</a>
+  <button type="button" aria-label="Close" data-close>×</button>
+</div>
+
+<header class="top" id="top">
+  <a class="brand" href="{{ home_url }}" aria-label="{{ f.studio.name_en }}"><img src="/assets/logo/studio-mark-96.png" alt="" width="34" height="34"><span>{{ f.studio.name_en }}</span></a>
+  <nav class="nav" aria-label="Primary">
+    <a href="{{ home_url }}#loop">{{ c.nav.game }}</a>
+    <a href="{{ home_url }}#magic">{{ c.nav.magic }}</a>
+    <a href="{{ home_url }}#traverse">{{ c.nav.traverse }}</a>
+    <a href="{{ home_url }}#story">{{ c.nav.story }}</a>
+    <a href="{{ home_url }}#demo">{{ c.nav.demo }}</a>
+    <a href="/presskit/">{{ c.nav.press }}</a>
+  </nav>
+  <div class="tools">
+    <div class="lang" aria-label="Language">
+      <a class="{{ 'active' if c.lang == 'ko' else '' }}" href="{{ '/' if page_kind != 'presskit' else '/presskit/' }}" data-lang-link="ko"{% if c.lang == 'ko' %} aria-current="true"{% endif %}>KO</a>
+      <a class="{{ 'active' if c.lang == 'en' else '' }}" href="{{ '/en/' if page_kind != 'presskit' else '/presskit/?lang=en' }}" data-lang-link="en"{% if c.lang == 'en' %} aria-current="true"{% endif %}>EN</a>
+    </div>
+    {% if released %}
+    <a class="btn small primary" href="{{ steam('header_buy') }}" target="_blank" rel="noopener">{{ c.hero.cta_buy }}</a>
+    {% else %}
+    <a class="btn small primary" href="{{ steam('header_wishlist') }}" target="_blank" rel="noopener">{{ c.nav.wishlist }}</a>
+    {% endif %}
+  </div>
+</header>
+
+<main id="main">
+{% block main %}{% endblock %}
+</main>
+
+<footer class="site-footer">
+  <div class="container row">
+    <div>
+      <div class="footer-brand"><img src="/assets/logo/studio-mark-96.png" alt="" width="30" height="30"><strong>{{ f.studio.name_en }}</strong></div>
+      <a class="mail" href="mailto:{{ f.studio.email }}">{{ f.studio.email }}</a>
+      <p class="copyright">{{ c.footer.copyright }}</p>
+    </div>
+    <nav aria-label="Social links">
+      <a href="{{ steam('footer_steam') }}" target="_blank" rel="noopener">{{ c.footer.links.steam }}</a>
+      <a href="{{ f.links.discord_en }}" target="_blank" rel="noopener">{{ c.footer.links.discord_en }}</a>
+      <a href="{{ f.links.discord_ko }}" target="_blank" rel="noopener">{{ c.footer.links.discord_ko }}</a>
+      <a href="{{ f.links.youtube }}" target="_blank" rel="noopener">{{ c.footer.links.youtube }}</a>
+      <a href="{{ f.links.x }}" target="_blank" rel="noopener">{{ c.footer.links.x }}</a>
+      <a href="{{ f.links.facebook }}" target="_blank" rel="noopener">{{ c.footer.links.facebook }}</a>
+      <a href="/presskit/">{{ c.footer.links.presskit }}</a>
+    </nav>
+  </div>
+</footer>
+
+{% if page_kind == 'index' %}
+<div class="mobile-bar">
+  {% if released %}
+  <a class="btn primary" href="{{ steam('mobilebar_buy') }}" target="_blank" rel="noopener">{{ c.hero.cta_buy }}</a>
+  {% else %}
+  <a class="btn primary" href="{{ steam('mobilebar_wishlist') }}" target="_blank" rel="noopener">{{ c.nav.wishlist }}</a>
+  {% endif %}
+  <a class="btn" href="{{ demo('mobilebar_demo') }}" target="_blank" rel="noopener">{{ c.nav.free_demo }}</a>
+</div>
+{% endif %}
+
+<script src="/assets/js/site.js?v={{ build_stamp }}" defer></script>
+{% block scripts %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,63 @@
+{
+  "_comment": "빌드가 처리할 미디어 목록. 경로는 절대경로 또는 src/ 기준 상대경로. 원본은 수정하지 않는다. crop: [left, top, right, bottom] 비율(0~1). aspect: 'w:h' 중앙 크롭.",
+  "images": {
+    "hero-poster":      {"src": "D:/PycharmProjects/2026/00_KOKOPAZU-STUDIO/mockup/assets/hero-poster2.jpg", "widths": [1920, 1280, 960], "aspect": "16:9"},
+    "loop-combat":      {"src": "D:/PycharmProjects/2026/00_KOKOPAZU-STUDIO/mockup/assets/loop-combat2.jpg", "widths": [1280, 640], "aspect": "16:10"},
+    "loop-gate":        {"src": "D:/PycharmProjects/2026/00_KOKOPAZU-STUDIO/mockup/assets/loop-gate2.jpg", "widths": [1280, 640], "aspect": "16:10"},
+    "boss-minotaur":    {"src": "D:/PycharmProjects/2026/00_KOKOPAZU-STUDIO/mockup/assets/boss-minotaur2.jpg", "widths": [1280, 640], "aspect": "16:10"},
+    "plat-climb":       {"src": "D:/PycharmProjects/2026/00_KOKOPAZU-STUDIO/mockup/assets/plat-climb.jpg", "widths": [1280, 640], "aspect": "16:9"},
+    "spell-projectile": {"src": "D:/PycharmProjects/2026/00_KOKOPAZU-STUDIO/mockup/assets/spell-projectile2.jpg", "widths": [1280, 640], "aspect": "16:10"},
+    "spell-aoe":        {"src": "D:/PycharmProjects/2026/00_KOKOPAZU-STUDIO/mockup/assets/spell-aoe2.jpg", "widths": [1280, 640], "aspect": "16:10"},
+    "spell-summon":     {"src": "D:/PycharmProjects/2026/00_KOKOPAZU-STUDIO/mockup/assets/spell-summon2.jpg", "widths": [1280, 640], "aspect": "16:10"},
+    "spell-shield":     {"src": "D:/PycharmProjects/2026/00_KOKOPAZU-STUDIO/mockup/assets/spell-shield2.jpg", "widths": [1280, 640], "aspect": "16:10"},
+    "plat-horse":       {"src": "D:/PycharmProjects/2026/00_KOKOPAZU-STUDIO/mockup/assets/plat-horse.jpg", "widths": [1280, 640], "aspect": "16:9"},
+    "plat-dragon":      {"src": "D:/PycharmProjects/2026/00_KOKOPAZU-STUDIO/mockup/assets/plat-dragon.jpg", "widths": [1280, 640], "aspect": "16:9"},
+    "plat-barrel":      {"src": "D:/PycharmProjects/2026/00_KOKOPAZU-STUDIO/mockup/assets/plat-barrel.jpg", "widths": [1280, 640], "aspect": "16:9"},
+    "plat-cannon":      {"src": "D:/PycharmProjects/2026/00_KOKOPAZU-STUDIO/mockup/assets/plat-cannon.jpg", "widths": [1280, 640], "aspect": "16:9"},
+    "plat-stairs":      {"src": "D:/PycharmProjects/2026/00_KOKOPAZU-STUDIO/mockup/assets/plat-stairs.jpg", "widths": [1280, 640], "aspect": "16:9"},
+    "char-haeon":       {"src": "D:/SavePrincessTorosso/프로필/player_수염.png", "widths": [480, 240], "aspect": "4:5"},
+    "char-torosso":     {"src": "D:/SavePrincessTorosso/프로필/미소 001.png", "widths": [480, 240], "aspect": "4:5", "crop": [0.28, 0.0, 0.72, 1.0]},
+    "char-darkknight":  {"src": "D:/SavePrincessTorosso/CG 이미지/Dark_Knight.png", "widths": [480, 240], "aspect": "4:5", "crop": [0.22, 0.0, 0.78, 1.0]}
+  },
+  "videos": {
+    "hero-montage":        "D:/PycharmProjects/2026/00_KOKOPAZU-STUDIO/mockup/assets/hero-montage.mp4",
+    "hero-montage-960":    "D:/PycharmProjects/2026/00_KOKOPAZU-STUDIO/mockup/assets/hero-montage-960.mp4",
+    "clip-combat-grass":   "D:/PycharmProjects/2026/00_KOKOPAZU-STUDIO/mockup/assets/clip-combat-grass.mp4",
+    "clip-combat-volcano": "D:/PycharmProjects/2026/00_KOKOPAZU-STUDIO/mockup/assets/clip-combat-volcano.mp4",
+    "clip-horse":          "D:/PycharmProjects/2026/00_KOKOPAZU-STUDIO/mockup/assets/clip-horse.mp4",
+    "clip-dragon":         "D:/PycharmProjects/2026/00_KOKOPAZU-STUDIO/mockup/assets/clip-dragon.mp4",
+    "clip-barrel":         "D:/PycharmProjects/2026/00_KOKOPAZU-STUDIO/mockup/assets/clip-barrel.mp4",
+    "clip-cannon":         "D:/PycharmProjects/2026/00_KOKOPAZU-STUDIO/mockup/assets/clip-cannon.mp4",
+    "clip-stairs":         "D:/PycharmProjects/2026/00_KOKOPAZU-STUDIO/mockup/assets/clip-stairs.mp4",
+    "clip-climb":          "D:/PycharmProjects/2026/00_KOKOPAZU-STUDIO/mockup/assets/clip-climb.mp4"
+  },
+  "logos": {
+    "title-gold":         "D:/PycharmProjects/2026/00_KOKOPAZU-STUDIO/mockup/assets/logo-title-gold.png",
+    "title-white":        "D:/PycharmProjects/2026/00_KOKOPAZU-STUDIO/mockup/assets/logo-title-white.png",
+    "studio-mark":        "D:/PycharmProjects/2026/00_KOKOPAZU-STUDIO/mockup/assets/studio-mark.png",
+    "studio-wordmark-en": "D:/SavePrincessTorosso/logo_kokopazu.png",
+    "studio-wordmark-ko": "D:/SavePrincessTorosso/logo_kokopazu_kor.png"
+  },
+  "presskit": {
+    "keyart": [
+      {"label": "Key art (title)", "src": "D:/SavePrincessTorosso/images_for_steam/main_capsule_009.png", "file": "keyart-title.jpg", "max_width": 2400},
+      {"label": "Key art (no text)", "src": "D:/SavePrincessTorosso/00_Trailer/생성된 이미지 1.png", "file": "keyart-notext.jpg", "max_width": 2400},
+      {"label": "Capsule (princess)", "src": "D:/SavePrincessTorosso/캡슐아트/prince_in_hand_with_title 002.png", "file": "capsule-princess.jpg", "max_width": 2400},
+      {"label": "Capsule (statues)", "src": "D:/SavePrincessTorosso/캡슐아트/Title_005.png", "file": "capsule-statues.jpg", "max_width": 2400}
+    ],
+    "screenshots": [
+      {"label": "Combat — grass", "src": "D:/PycharmProjects/2026/00_KOKOPAZU-STUDIO/mockup/assets/loop-combat2.jpg", "file": "ss-combat-grass.jpg"},
+      {"label": "Combat — volcano", "src": "D:/PycharmProjects/2026/00_KOKOPAZU-STUDIO/mockup/assets/combat-volcano.jpg", "file": "ss-combat-volcano.jpg"},
+      {"label": "Combat — ice", "src": "D:/PycharmProjects/2026/00_KOKOPAZU-STUDIO/mockup/assets/combat-ice2.jpg", "file": "ss-combat-ice.jpg"},
+      {"label": "Gate opens", "src": "D:/PycharmProjects/2026/00_KOKOPAZU-STUDIO/mockup/assets/loop-gate2.jpg", "file": "ss-gate.jpg"},
+      {"label": "Boss — Minotaur", "src": "D:/PycharmProjects/2026/00_KOKOPAZU-STUDIO/mockup/assets/boss-minotaur2.jpg", "file": "ss-boss-minotaur.jpg"},
+      {"label": "Boss — Cyclops", "src": "D:/PycharmProjects/2026/00_KOKOPAZU-STUDIO/mockup/assets/boss-cyclops.jpg", "file": "ss-boss-cyclops.jpg"},
+      {"label": "Horseback bridge", "src": "D:/PycharmProjects/2026/00_KOKOPAZU-STUDIO/mockup/assets/plat-horse.jpg", "file": "ss-horse-bridge.jpg"},
+      {"label": "Dragon flight", "src": "D:/PycharmProjects/2026/00_KOKOPAZU-STUDIO/mockup/assets/plat-dragon.jpg", "file": "ss-dragon-flight.jpg"},
+      {"label": "Barrel ladder", "src": "D:/PycharmProjects/2026/00_KOKOPAZU-STUDIO/mockup/assets/plat-barrel.jpg", "file": "ss-barrel-ladder.jpg"},
+      {"label": "Rolling cannonballs", "src": "D:/PycharmProjects/2026/00_KOKOPAZU-STUDIO/mockup/assets/plat-cannon.jpg", "file": "ss-cannonballs.jpg"},
+      {"label": "Slippery stairs", "src": "D:/PycharmProjects/2026/00_KOKOPAZU-STUDIO/mockup/assets/plat-stairs.jpg", "file": "ss-slippery-stairs.jpg"},
+      {"label": "Obstacle climb", "src": "D:/PycharmProjects/2026/00_KOKOPAZU-STUDIO/mockup/assets/plat-climb.jpg", "file": "ss-obstacle-climb.jpg"}
+    ]
+  }
+}

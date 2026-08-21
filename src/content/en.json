@@ -1,0 +1,157 @@
+{
+  "lang": "en",
+  "html_lang": "en",
+  "other_lang": "ko",
+  "other_lang_label": "KO",
+  "other_lang_url": "/",
+  "lang_banner": "한국어로 보기 →",
+
+  "nav": {
+    "game": "Game", "magic": "Magic", "traverse": "Platforming", "story": "Story", "demo": "Demo", "press": "Press",
+    "wishlist": "Wishlist", "free_demo": "Free demo", "skip": "Skip to content"
+  },
+
+  "hero": {
+    "chip_demo": "Free demo on Steam",
+    "chip_release": "Coming November 2026",
+    "chip_released": "Out now on Steam",
+    "logo_alt": "Save Princess Torosso",
+    "hook": "No swords. Only spells.",
+    "sub_1": "A fantasy 3D action adventure you can jump into instantly — no build homework, just cast, dodge, and push forward.",
+    "sub_2": "Become a wizard of light and rescue Princess Torosso from the prison island.",
+    "cta_wishlist": "Wishlist on Steam",
+    "cta_buy": "Buy on Steam",
+    "cta_demo": "Play the free demo",
+    "meta_platform": "PC Windows · Steam, then STOVE",
+    "meta_languages": "11 languages",
+    "meta_controls": "Gamepad recommended",
+    "scroll": "Scroll",
+    "video_label": "Gameplay footage: combat across grass, volcano, ice and desert"
+  },
+
+  "trailer": {
+    "kicker": "Trailer",
+    "h2": "Thirty seconds is all it takes.",
+    "lead": "Magic combat, obstacle runs, boss fights — see it in real gameplay.",
+    "play": "Play trailer"
+  },
+
+  "loop": {
+    "kicker": "How it plays",
+    "h2": "Slay the target. The gate opens.",
+    "lead": "No build research. Aim, clear, beat the boss, break through — the flow never stops until the ending.",
+    "steps": [
+      {"n": "01", "title": "Aim and cast", "body": "Fight the incoming waves with ranged magic.", "img": "loop-combat", "alt": "Casting magic at a crowd of enemies on a grass field"},
+      {"n": "02", "title": "Clear the target, open the gate", "body": "Defeat the designated enemies and the next gate opens.", "img": "loop-gate", "alt": "A castle gate opening after the objective is cleared"},
+      {"n": "03", "title": "Beat the boss", "body": "A boss waits at the end of every chapter.", "img": "boss-minotaur", "alt": "The Minotaur boss"},
+      {"n": "04", "title": "Break through", "body": "Past the boss, an obstacle run leads to the next chapter — horses, dragons, ladders and cannonballs change the rhythm.", "img": "plat-climb", "alt": "Climbing a wooden structure on a cliff"}
+    ]
+  },
+
+  "magic": {
+    "kicker": "Magic system",
+    "h2": "Four spell cards. No blade.",
+    "lead": "Projectile and Area spells grow stronger as you stack cards; Summon and Shield trigger the moment you pick them up.",
+    "badge_manual": "Manual · Upgrades",
+    "badge_auto": "Auto-cast",
+    "cards": [
+      {"name": "Projectile", "sub": "Ranged single target", "auto": false, "body": "Pressure single targets from range. Every hit refills mana.", "img": "spell-projectile", "clip": "clip-combat-grass", "alt": "Firing projectile magic"},
+      {"name": "Area", "sub": "Area of effect", "auto": false, "body": "Spend stored mana to wipe a whole crowd at once.", "img": "spell-aoe", "clip": "clip-combat-volcano", "alt": "Area magic hitting a crowd"},
+      {"name": "Summon", "sub": "Allies", "auto": true, "body": "Pick up the card and an ally joins the fight instantly.", "img": "spell-summon", "clip": "", "alt": "Summon magic"},
+      {"name": "Shield", "sub": "Defense", "auto": true, "body": "Block incoming damage and survive the push.", "img": "spell-shield", "clip": "", "alt": "Shield magic"}
+    ],
+    "mana_b": "The mana loop",
+    "mana": "land basic hits to recover mana, then unleash an area blast. There is no build to study."
+  },
+
+  "traverse": {
+    "kicker": "Platforming",
+    "h2": "After every fight, the road changes.",
+    "lead": "Every chapter ends with an obstacle section that changes how you move — jump, ride, time it right, and reach the next region.",
+    "hover_hint": "Hover a tile to play the clip.",
+    "tiles": [
+      {"title": "Collapsing bridge on horseback", "img": "plat-horse", "clip": "clip-horse"},
+      {"title": "Dragon air combat", "img": "plat-dragon", "clip": "clip-dragon"},
+      {"title": "Barrel ladder", "img": "plat-barrel", "clip": "clip-barrel"},
+      {"title": "Rolling cannonballs", "img": "plat-cannon", "clip": "clip-cannon"},
+      {"title": "Slippery stairs", "img": "plat-stairs", "clip": "clip-stairs"},
+      {"title": "Obstacle climb", "img": "plat-climb", "clip": "clip-climb"}
+    ]
+  },
+
+  "story": {
+    "kicker": "Story",
+    "h2": "In a world where the bloodlines of light and darkness still remain.",
+    "p": [
+      "An arrogant imperial prince proposes to Princess Torosso and is rejected. Consumed by pride, he borrows the power of darkness, invades the kingdom, and takes the princess to a cursed prison island.",
+      "A young wizard of light, bound to the princess by love, guilt, and duty, crosses the sea alone.",
+      "Now it is time to cut off the fate of darkness with your own hands."
+    ],
+    "characters": [
+      {"name": "Haeon", "role": "Wizard of light", "body": "A wandering wizard of the bloodline of light. He fights with a staff and the Dawn Sigil stone — never a sword.", "img": "char-haeon", "alt": "Haeon, the protagonist"},
+      {"name": "Princess Torosso", "role": "The one to rescue", "body": "Princess of a small kingdom and heir to the line that guards the seal. In a crisis, she thinks of her people first.", "img": "char-torosso", "alt": "Princess Torosso"},
+      {"name": "Dark Knight", "role": "The fallen prince", "body": "The imperial prince who took the power of darkness. What he became, you will find on the prison island.", "img": "char-darkknight", "alt": "The Dark Knight"}
+    ]
+  },
+
+  "leaderboard": {
+    "kicker": "Clear-time leaderboard",
+    "h2": "How fast can you rescue Princess Torosso?",
+    "body": "Finish the game and your clear time goes on the Steam leaderboard. Run it again — tighten your route, cut the mistakes, and chase the fastest rescue.",
+    "button": "View the leaderboard",
+    "note_coming": "The leaderboard opens with the full release."
+  },
+
+  "demo": {
+    "kicker": "Free demo",
+    "h2": "Play the free demo on Steam now.",
+    "lead": "Liked it? Wishlist the full game to get notified at launch.",
+    "lead_released": "Try the demo first, then carry on into the full game.",
+    "cta_demo": "Play the free demo",
+    "cta_wishlist": "Wishlist on Steam",
+    "cta_buy": "Buy on Steam"
+  },
+
+  "release": {
+    "kicker": "Release",
+    "h2": "Coming to Steam in November 2026.",
+    "h2_released": "Available now on Steam.",
+    "rows": {
+      "release": "Release", "release_v": "November 2026 (planned)", "release_v_released": "Released",
+      "platform": "Platform", "platform_v": "PC Windows · Steam first, then STOVE",
+      "price": "Price",
+      "languages": "Languages", "languages_prefix": "11 languages — ",
+      "controls": "Controls", "controls_v": "Gamepad recommended",
+      "spec": "Minimum specs"
+    }
+  },
+
+  "studio": {
+    "kicker": "Studio",
+    "h2": "Kokopazu Studio",
+    "body": "KOKOPAZU STUDIO is a one-person independent game studio built around a simple question: does an adventure game always need complex skill trees and weapon combinations? Its first title, Save Princess Torosso, combines intuitive progression and ranged magic combat with platform traversal — one continuous adventure you can stay immersed in until the ending.",
+    "developer_label": "Developer",
+    "developer": "Solo developer — KOKOPAZU",
+    "contact_label": "Contact",
+    "press_label": "Press",
+    "press_body": "Logos, screenshots and the factsheet are available in the presskit.",
+    "cta_presskit": "View presskit",
+    "cta_email": "Email us"
+  },
+
+  "footer": {
+    "copyright": "© 2026 Kokopazu Studio. All rights reserved.",
+    "links": {"steam": "Steam", "discord_en": "Discord (EN)", "discord_ko": "Discord (KO)", "youtube": "YouTube", "x": "X", "facebook": "Facebook", "presskit": "Presskit"}
+  },
+
+  "redirects": {
+    "title": "Redirecting…",
+    "body": "You are being redirected. If nothing happens, use the link below."
+  },
+
+  "notfound": {
+    "title": "Page not found",
+    "body": "This page has moved or no longer exists.",
+    "home": "Back to home"
+  }
+}

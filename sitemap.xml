@@ -1,9 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://kokopazu-studio.github.io/</loc>
-    <lastmod>2026-03-30</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://kokopazu.com/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://kokopazu.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kokopazu.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kokopazu.com/en/"/>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://kokopazu.com/en/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://kokopazu.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kokopazu.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kokopazu.com/en/"/>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://kokopazu.com/presskit/</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset>

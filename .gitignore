@@ -1,0 +1,4 @@
+# build sources: heavy originals are never committed
+src/media_src/
+src/__pycache__/
+*.pyc

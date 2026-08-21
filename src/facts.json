@@ -1,0 +1,141 @@
+{
+  "_comment": "kokopazu.com 단일 원본. 날짜·가격·링크·언어·이메일은 여기서만 수정한다. 빌드(src/build.py)가 모든 페이지에 주입한다.",
+  "_updated": "2026-08-21",
+
+  "game": {
+    "title": "Save Princess Torosso",
+    "title_ko": "Save Princess Torosso",
+    "genre_ko": "판타지 3D 액션 어드벤처",
+    "genre_en": "Fantasy 3D Action Adventure",
+    "hook_ko": "검은 없습니다. 오직 마법뿐.",
+    "hook_en": "No swords. Only spells.",
+    "steam_appid": 4603700,
+    "demo_appid": 4744890,
+    "engine": "Unity 6 URP"
+  },
+
+  "studio": {
+    "name_en": "Kokopazu Studio",
+    "name_ko": "코코파즈 스튜디오",
+    "name_caps": "KOKOPAZU STUDIO",
+    "developer_display": "KOKOPAZU",
+    "developer_note": "사이트/프레스킷에는 개인 이름 대신 'KOKOPAZU'(1인 개발)로 표기",
+    "country_ko": "대한민국",
+    "country_en": "South Korea",
+    "email": "kokopazustudio@gmail.com",
+    "founded": "2025",
+    "business_registered": false
+  },
+
+  "release": {
+    "state": "coming_soon",
+    "display_ko": "2026년 11월",
+    "display_en": "November 2026",
+    "display_iso": "2026-11",
+    "exact_kst": null,
+    "exact_pdt": null,
+    "note": "state: coming_soon | released. 정확 일자가 정해지면 exact_kst/exact_pdt에 'YYYY-MM-DD HH:mm' 입력. KO 문구는 KST, EN 문구는 PDT 기준으로 표기."
+  },
+
+  "launch_discount": {
+    "show": false,
+    "percent": 10,
+    "days": 14,
+    "note": "대표 확정 전까지 show:false (화면에 표시하지 않음)."
+  },
+
+  "price": {
+    "show": true,
+    "krw": 15000,
+    "usd": 13.99,
+    "display": "₩15,000 / $13.99"
+  },
+
+  "platforms": {
+    "os": "PC Windows",
+    "primary": "Steam",
+    "secondary": "STOVE",
+    "display_ko": "PC Windows · Steam → STOVE",
+    "display_en": "PC Windows · Steam, then STOVE"
+  },
+
+  "demo": {
+    "available": true,
+    "released_on": "2026-06-14",
+    "display_ko": "Steam 데모 플레이 가능",
+    "display_en": "Free demo on Steam"
+  },
+
+  "controls": {
+    "display_ko": "게임패드 권장",
+    "display_en": "Gamepad recommended"
+  },
+
+  "languages": {
+    "count": 11,
+    "list": [
+      {"code": "ko", "ko": "한국어", "en": "Korean"},
+      {"code": "en", "ko": "영어", "en": "English"},
+      {"code": "ja", "ko": "일본어", "en": "Japanese"},
+      {"code": "zh-CN", "ko": "중국어 간체", "en": "Simplified Chinese"},
+      {"code": "es-ES", "ko": "스페인어(스페인)", "en": "Spanish (Spain)"},
+      {"code": "pt-BR", "ko": "포르투갈어(브라질)", "en": "Portuguese (Brazil)"},
+      {"code": "id", "ko": "인도네시아어", "en": "Indonesian"},
+      {"code": "ru", "ko": "러시아어", "en": "Russian"},
+      {"code": "de", "ko": "독일어", "en": "German"},
+      {"code": "fr", "ko": "프랑스어", "en": "French"},
+      {"code": "pl", "ko": "폴란드어", "en": "Polish"}
+    ]
+  },
+
+  "min_spec": {
+    "os": "Windows 10 64-bit",
+    "cpu": "Intel i5-10400",
+    "ram": "8 GB",
+    "gpu": "GTX 1060",
+    "directx": "DirectX 11",
+    "storage": "8 GB"
+  },
+
+  "links": {
+    "site": "https://kokopazu.com",
+    "steam": "https://store.steampowered.com/app/4603700/Save_Princess_Torosso/",
+    "steam_demo": "https://store.steampowered.com/app/4744890/Save_Princess_Torosso_Demo/",
+    "steam_leaderboard": "https://steamcommunity.com/stats/4603700/leaderboards",
+    "discord_en": "https://discord.gg/vYYG5PSeVs",
+    "discord_ko": "https://discord.gg/b3eH4RECWr",
+    "youtube": "https://www.youtube.com/@kokopazustudio",
+    "x": "https://x.com/kokopazustudio",
+    "facebook": "https://www.facebook.com/profile.php?id=61575441099297",
+    "presskit": "https://kokopazu.com/presskit/"
+  },
+
+  "utm": {
+    "source": "website",
+    "medium": "referral",
+    "campaign": "november_launch",
+    "note": "Steam 링크마다 utm_content 로 위치(header_wishlist, hero_wishlist, hero_demo, demo_section, footer_steam 등)를 붙인다. 프레스킷은 source=presskit, medium=press."
+  },
+
+  "trailer": {
+    "youtube_id": "",
+    "note": "새 공식 트레일러 완성 시 ID 입력. 비어 있으면 트레일러 섹션을 렌더하지 않는다."
+  },
+
+  "hero_video": {
+    "order": ["grass", "volcano", "ice", "desert"],
+    "src_mp4": "assets/video/hero-montage.mp4",
+    "poster": "assets/video/hero-poster.jpg",
+    "max_bytes": 3500000
+  },
+
+  "seo": {
+    "title_ko": "Save Princess Torosso — 판타지 3D 액션 어드벤처 | Kokopazu Studio",
+    "title_en": "Save Princess Torosso — Fantasy 3D Action Adventure | Kokopazu Studio",
+    "description_ko": "검은 없습니다. 오직 마법뿐. 원거리 마법 전투, 스킬 카드 성장, 3D 플랫폼 장애물 구간, 클리어 타임 순위표가 결합된 판타지 3D 액션 어드벤처. 2026년 11월 Steam 출시 예정, 데모 플레이 가능.",
+    "description_en": "No swords. Only spells. A fantasy 3D action adventure with ranged magic combat, skill-card progression, platforming obstacles, and a clear-time leaderboard. Demo out now. Coming to Steam in November 2026.",
+    "og_image": "https://kokopazu.com/assets/og-image.jpg",
+    "canonical_ko": "https://kokopazu.com/",
+    "canonical_en": "https://kokopazu.com/en/"
+  }
+}
